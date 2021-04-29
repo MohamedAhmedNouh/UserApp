@@ -1,0 +1,112 @@
+﻿@model User
+@{
+    Layout = null;
+}
+<div class="modal fade bd-example-modal-lg" id="ModalCreate" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title h4" id="myLargeModalLabel">Add User</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            
+            <form form enctype="multipart/form-data" id="CreateForm" asp-controller="Users" asp-action="Create" method="post">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <div class="row form-row">
+                            <div class="col-md-6 ">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">First Name</span>
+                                    </div>
+                                    <input asp-for="FName" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">Last Name</span>
+                                    </div>
+                                    <input asp-for="LName" class="form-control" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row form-row">
+                            <div class="col-md-6">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">UserName</span>
+                                    </div>
+                                    <input asp-for="UserName" class="form-control" />
+                                </div>
+
+                            </div>
+                            <div class="col-md-6">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">Password</span>
+                                    </div>
+                                    <input asp-for="Password" type="password" class="form-control" />
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="row form-row">
+                            <div class="col-md-6">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">Phone Number</span>
+                                    </div>
+                                    <input asp-for="PhoneNumber" class="form-control" />
+                                </div>
+
+                            </div>
+                            <div class="col-md-6">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">Address</span>
+                                    </div>
+                                    <input asp-for="Address" class="form-control" />
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="row form-row">
+                            <div class="col-md-6">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">Email</span>
+                                    </div>
+                                    <input asp-for="Email" class="form-control" />
+                                </div>
+
+                            </div>
+                            <div class="col-md-6">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">Birth Date</span>
+                                    </div>
+                                    <input asp-for="BirthDate" type="date" class="form-control" />
+                                </div>
+
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button class="btn btn-info" type="submit">Submit</button>
+                </div>
+
+            </form>
+        
+        </div>
+    </div>
+</div>
+
+
+

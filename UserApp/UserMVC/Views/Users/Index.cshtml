@@ -1,0 +1,141 @@
+﻿@model List<User>
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<h3>Users</h3>
+<button class="btn btn-primary mt-5" onclick="openCreateModal()">
+    Create new user
+</button>
+<div class="row mt-5">
+    @if (Model != null && Model.Count > 0)
+    {
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">
+                        ID
+                    </th>
+                    <th scope="col">
+                        First Name
+                    </th>
+                    <th scope="col">
+                        Last Name
+                    </th>
+                    <th scope="col">
+                        UserName
+                    </th>
+                    <th scope="col">
+                        Email
+                    </th>
+                    <th scope="col">
+                        Address
+                    </th>
+                    <th scope="col">
+                        Phone Number
+                    </th>
+                    <th scope="col">
+                        Edit
+                    </th>
+                    <th scope="col">
+                        Delete
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var user in Model)
+                {
+                    <tr>
+                        <td>
+                            @user.Id
+                        </td>
+                        <td>
+                            @user.FName
+                        </td>
+                        <td>
+                            @user.LName
+                        </td>
+                        <td>
+                            @user.UserName
+                        </td>
+                        <td>
+                            @user.Email
+                        </td>
+                        <td>
+                            @user.Address
+                        </td>
+                        <td>
+                            @user.PhoneNumber
+                        </td>
+                        <td>
+                            <button class="btn" onclick="openEditModal('@user.Id')">
+                                <i class="fas fa-pen-square"></i>
+                            </button>
+                        </td>
+                        <td>
+                            <button class="btn" onclick="openDeleteModal('@user.Id')">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+    }
+
+</div>
+<div id="ModalEditDiv">
+
+</div>
+<div id="ModalDeleteDiv">
+
+</div>
+<div id="ModalCreateDiv">
+
+</div>
+<script>
+    function openEditModal(id) {
+        $.ajax({
+            type: 'GET',
+            url: '@Url.Action("Edit", "Users")/' + id,
+            dataType: "html",
+            success: function (data) {
+                $("#ModalEditDiv").html(data);
+                $("#ModalEdit").modal("show");
+            },
+            error: function (jq, status, message) {
+                console.log('A jQuery error has occurred. Status: ' + status + ' - Message: ' + message);
+            }
+        });
+    }
+    function openDeleteModal(id) {
+        $.ajax({
+            type: 'GET',
+            url: '@Url.Action("DeleteView", "Users")/' + id,
+            dataType: "html",
+            success: function (data) {
+                $("#ModalDeleteDiv").html(data);
+                $("#ModalDelete").modal("show");
+            },
+            error: function (jq, status, message) {
+                console.log('A jQuery error has occurred. Status: ' + status + ' - Message: ' + message);
+            }
+        });
+    }
+    function openCreateModal() {
+        $.ajax({
+            type: 'GET',
+            url: '@Url.Action("Create", "Users")',
+            dataType: "html",
+            success: function (data) {
+                $("#ModalCreateDiv").html(data);
+                $("#ModalCreate").modal("show");
+            },
+            error: function (jq, status, message) {
+                console.log('A jQuery error has occurred. Status: ' + status + ' - Message: ' + message);
+            }
+        });
+    }
+</script>

@@ -1,0 +1,40 @@
+﻿<Properties StartupConfiguration="Multiple Projects">
+  <MonoDevelop.Ide.Workbench ActiveDocument="UserMVC/Views/Home/Privacy.cshtml">
+    <Files>
+      <File FileName="UserMVC/Controllers/UsersController.cs" Line="66" Column="1" />
+      <File FileName="UserMVC/Views/Users/Edit.cshtml" Line="96" Column="1" />
+      <File FileName="UserMVC/Models/User.cs" Line="20" Column="34" />
+      <File FileName="UserMVC/Views/Users/Index.cshtml" Line="132" Column="39" />
+      <File FileName="UsersAPI/Controllers/UsersController.cs" Line="89" Column="1" />
+      <File FileName="UserMVC/Views/Users/Delete.cshtml" Line="9" Column="87" />
+      <File FileName="UserMVC/Views/Shared/_Layout.cshtml" Line="41" Column="39" />
+      <File FileName="UserMVC/Views/Users/Create.cshtml" Line="15" Column="111" />
+      <File FileName="UserMVC/Views/Home/Privacy.cshtml" Line="6" Column="48" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="UserApp" expanded="True" selected="True" />
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.UserMVC PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.ItemProperties.UsersAPI PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations>
+    <MultiItemSolutionRunConfiguration Id="Multiple Projects" Name="Multiple Projects">
+      <Items>
+        <StartupItem ItemId="{0E83E549-12F3-4B0C-8478-C56AC93E58E1}" ItemName="UserMVC" ConfigurationId="Default" />
+        <StartupItem ItemId="{C38B6AA3-F9FD-4305-8669-166AEFF9FC10}" ItemName="UsersAPI" ConfigurationId="Default" />
+      </Items>
+    </MultiItemSolutionRunConfiguration>
+  </MultiItemStartupConfigurations>
+</Properties>
